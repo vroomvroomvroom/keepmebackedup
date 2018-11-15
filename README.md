@@ -11,7 +11,7 @@ VARS in .env
 Dockerfile has the quick and dirty installs
 entry.sh does all the workat   
 
-# pull base image .. kinda hefty at 96 mb 
+# pull base image .. this now pulls directly from gliderlabs/alpine:latest
 $docker pull somen00b/keepmebackedup:latest
 # change values in ./keepmebackedup/.env to suit needs .. aka put in your AWS creds or set env vars accordingly
 $docker run -it --env-file ./keepmebackedup/.env -v /some/folder/to/backup:/opt/datavol somen00b/keepmebackedup:latest
